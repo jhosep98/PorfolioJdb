@@ -1,0 +1,64 @@
+import React from "react";
+import styled from "styled-components";
+
+const Div = styled.header`
+  grid-area: header;
+  padding: 1.25em;
+  background: #fff;
+  box-shadow: 0px 0px 4.375em rgba(102, 102, 102, 0.2);
+  a {
+    padding: 0.625em;
+    color: #000;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 400;
+    width: 100%;
+    text-align: center;
+    transition: 0.2s ease all;
+    font-size: 1em;
+  }
+ a:hover {
+    background: #000;
+    color: #fff;
+  }
+`;
+const InicialesLogo = styled.p`
+  padding: 0.3125em;
+  border: 2px solid #000;
+  display: inline-block;
+  font-size: 1em;
+  margin-bottom: 0.9375em;
+`
+
+const Logo = styled.div`
+  margin-bottom: 1.25em;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 3px;
+`;
+const H1 = styled.h1`
+font-size: 30px;
+`;
+const Nav = styled.nav`
+   border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    display: flex;
+    justify-content: space-between;
+`;
+
+const Header = () => {
+  return (
+    <Div>
+      <Logo>
+        <InicialesLogo>JDB</InicialesLogo>
+        <H1>Jhosep Davila Bustamante</H1>
+      </Logo>
+      <Nav className="menu">
+        <a href="#">Inicio</a>
+      </Nav>
+    </Div>
+  );
+};
+
+export default Header;
