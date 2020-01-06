@@ -6,6 +6,11 @@ import Board from './img/img-1.png';
 import Generate from './img/img-2.png';
 import  Weather from './img/img-3.png';
 
+import { useTranslations } from '../translations'
+
+const CustomButton = styled(Button)`
+  background-color: red !important;
+`
 
 const Article = styled.article`
   display: flex;
@@ -30,6 +35,7 @@ const Contenedor_texto = styled.div`
   width: 50%;
   display: flex;
   flex-direction: column;
+  align-items:flex-start;
   justify-content: space-between;
   width: 100%;
 `;
@@ -58,7 +64,10 @@ const Article3 = styled.article`
   }
 `;
 
-const Proyects = () => (
+const Proyects = () => {
+  const { translate: t } = useTranslations()
+
+  return (
   <>
     <Main>
       <Article>
@@ -70,7 +79,7 @@ const Proyects = () => (
         <Contenedor_texto>
           <div>
             <Titulo>
-              <a href="#">Tablero de dibujo</a>
+              <a href="#">{t('proyects_section.proyects[0].title')}</a>
             </Titulo>
             <Fecha>
               <time>Octubre 08, 2019</time>
@@ -82,12 +91,14 @@ const Proyects = () => (
             siguiendo un tutorial de JS, luego la convertí en React como
             ejercicio.
           </Parrafo>
-          <Button
+          <CustomButton
             href="https://jhosep98.github.io/jdbsPaint-con-Reactjs/"
             target="blank"
+            variant="contained" 
+            color="primary"
           >
             Ver
-          </Button>
+          </CustomButton>
         </Contenedor_texto>
       </Article>
 
@@ -109,12 +120,14 @@ const Proyects = () => (
           <Parrafo>
           Generador de efectos de imagen para su imagen. El resultado final es una porción de HTML que puede incrustar en su sitio web.
           </Parrafo>
-          <Button
+          <CustomButton
             href="https://jhosep98.github.io/Carrusel/"
             target="blank"
+            variant="contained" 
+            color="primary"
           >
             Ver
-          </Button>
+          </CustomButton>
         </Contenedor_texto>
       </Article>
 
@@ -136,16 +149,18 @@ const Proyects = () => (
           <Parrafo>
           Un sitio web simple que muestra información sobre el clima del país y la ciudad que usted quiera.
           </Parrafo>
-          <Button
+          <CustomButton
             href="https://jhosep98.github.io/Weather-con-Reactjs/build/index"
             target="blank"
+            variant="contained" color="primary"
           >
             Ver
-          </Button>
+          </CustomButton>
         </Contenedor_texto>
       </Article3>
     </Main>
   </>
-);
+  )
+}
 
 export default Proyects;

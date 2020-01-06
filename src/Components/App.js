@@ -7,6 +7,8 @@ import Proyects from "./proyects";
 import Aside from "./aside";
 import Footer from "./footer";
 
+import { TranslationProvider } from '../translations'
+
 const GlobalStyle = createGlobalStyle`
   *, *::before, *::after {
      box-sizing: border-box;
@@ -30,14 +32,15 @@ const Div = styled.div`
   max-width: 75em;
   margin: 1.25em auto;
 `;
+
 const Box = styled.div`
-width:100%;
-display:flex;
+  width:100%;
+  display:flex;
 `;
 
 const App = () => {
   return (
-    <>
+    <TranslationProvider defaultLanguage='es'>
         <Div>
         <GlobalStyle />
           <Header />
@@ -48,7 +51,7 @@ const App = () => {
           </Box>
           <Footer />
         </Div>
-    </>
+    </TranslationProvider>
   );
 };
 

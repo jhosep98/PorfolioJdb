@@ -1,5 +1,9 @@
 import React from "react";
 import styled from "styled-components";
+import Select from '@material-ui/core/Select';
+import MenuItem from '@material-ui/core/MenuItem';
+
+import { useTranslations } from '../translations'
 
 const Div = styled.header`
   grid-area: header;
@@ -48,10 +52,15 @@ const Nav = styled.nav`
 `;
 
 const Header = () => {
+  const { currentLanguage, setCurrentLanguage } = useTranslations()
   return (
     <Div>
       <Logo>
         <InicialesLogo>JDB</InicialesLogo>
+        <Select value={currentLanguage} onChange={ev => setCurrentLanguage(ev.target.value)}>
+          <MenuItem value='es'>Español</MenuItem>
+          <MenuItem value='en'>Inglish</MenuItem>
+        </Select>
         <H1>Jhosep Davila Bustamante</H1>
       </Logo>
       <Nav className="menu">

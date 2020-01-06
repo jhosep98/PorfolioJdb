@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
+import { useTranslations } from "../translations";
 import image1 from "./img/img-02.jpg";
 
 const Article = styled.article`
@@ -34,33 +35,37 @@ const Box_aboutMe = styled.p`
 const Contenedor_thumbnail = styled.div`
   min-height: 100%;
   width: 50%;
-  img{
-	width: 100%;
+  img {
+    width: 100%;
     height: 100%;
     object-fit: cover;
   }
 `;
-const Destacado = () => (
-  <Article>
-    <div>
+const Destacado = () => {
+  const { translate: t } = useTranslations()
+
+  return (
+    <Article>
       <div>
-        <H2>Sobre mi:</H2>
-        <P>
-          <time>Enero 04, 2020</time>
-        </P>
+        <div>
+          <H2>Sobre mi:</H2>
+          <P>
+            <time>Enero 04, 2020</time>
+          </P>
+        </div>
+        <Box_aboutMe>
+          *Edad: 21 <br />
+          *Nacionalidad: Peruana <br />
+          *Correo: jhosepdb149@gmail.com <br />
+          *Experiencia: Freelancer en www.Freelancer.com <br />
+          *Radica: Argentina - CABA
+        </Box_aboutMe>
       </div>
-      <Box_aboutMe>
-        *Edad: 21 <br />
-        *Nacionalidad: Peruana <br />
-        *Correo: jhosepdb149@gmail.com <br />
-        *Experiencia: Freelancer en www.Freelancer.com <br />
-        *Radica: Argentina - CABA
-      </Box_aboutMe>
-    </div>
-    <Contenedor_thumbnail>
-      <img src={image1} />
-    </Contenedor_thumbnail>
-  </Article>
-);
+      <Contenedor_thumbnail>
+        <img src={image1} />
+      </Contenedor_thumbnail>
+    </Article>
+  );
+};
 
 export default Destacado;
