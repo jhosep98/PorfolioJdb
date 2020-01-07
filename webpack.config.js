@@ -28,7 +28,7 @@ module.exports = {
       {
         test: /\.(yaml|yml)$/,
         use: ['json-loader', 'yaml-loader']
-      }
+      },
     ]
   },
   resolve: {

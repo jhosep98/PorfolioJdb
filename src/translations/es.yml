@@ -5,3 +5,23 @@ proyects_section:
       title: Tablero de dibujo
       date: Octubre 08, 2019
       desc: Este es un tablero interactivo donde puedes dibujar. Cuenta con varias herramientas y configuraciones. Creé esta aplicación siguiendo un tutorial de JS, luego la convertí en React como ejercicio.
+    -
+      title: Generador de efectos de imagen
+      date: Noviembre 08, 2019
+      desc: Generador de efectos de imagen para su imagen. El resultado final es una porción de HTML que puede incrustar en su sitio web.
+
+    -
+      title: Aplicación de información meteorológica
+      date: Septiembre 08, 2019
+      desc: Un sitio web simple que muestra información sobre el clima del país y la ciudad que usted quiera.
+aside:
+  saludo: ¡Hola!
+  parrafo: Soy un desarrollador de software Jr. que actualmente se enfoca en aprender desarrolloweb fullstack, comenzando con tecnologías básicas como HTML y CSS, herramientas y conceptosaún más complejos y modernos como NodeJS, React y control de versiones.
+aboutMe:
+  about: Sobre mi
+  date: Enero 04, 2020
+  desc: >
+    Edad - 21 <br />
+    Correo - jhosepdb149@gmail.com <br />
+    Experiencia - Freelancer en www.Freelancer.com <br />
+    Radica - Argentina - CABA

@@ -5,6 +5,8 @@ import MenuItem from '@material-ui/core/MenuItem';
 
 import { useTranslations } from '../translations'
 
+
+
 const Div = styled.header`
   grid-area: header;
   padding: 1.25em;
@@ -30,9 +32,9 @@ const Div = styled.header`
 const InicialesLogo = styled.p`
   padding: 0.3125em;
   border: 2px solid #000;
-  display: inline-block;
   font-size: 1em;
   margin-bottom: 0.9375em;
+  width:10%;
 `
 
 const Logo = styled.div`
@@ -40,9 +42,14 @@ const Logo = styled.div`
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 3px;
+  display:flex;
+  justify-content:space-between;
 `;
 const H1 = styled.h1`
 font-size: 30px;
+text-align:center;
+text-transform: uppercase;
+font-family:IBrushstroke, fantasy;
 `;
 const Nav = styled.nav`
    border-top: 1px solid #000;
@@ -59,10 +66,10 @@ const Header = () => {
         <InicialesLogo>JDB</InicialesLogo>
         <Select value={currentLanguage} onChange={ev => setCurrentLanguage(ev.target.value)}>
           <MenuItem value='es'>Español</MenuItem>
-          <MenuItem value='en'>Inglish</MenuItem>
-        </Select>
+          <MenuItem value='en'>English</MenuItem>
+        </Select> 
+        </Logo>
         <H1>Jhosep Davila Bustamante</H1>
-      </Logo>
       <Nav className="menu">
         <a href="#">Inicio</a>
       </Nav>

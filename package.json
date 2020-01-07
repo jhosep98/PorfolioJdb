@@ -31,6 +31,7 @@
     "json-loader": "^0.5.7",
     "style-loader": "^1.1.2",
     "styled-components": "^4.4.1",
+    "ttf-loader": "^1.0.2",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.10.1",

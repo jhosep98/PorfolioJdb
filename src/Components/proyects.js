@@ -9,7 +9,7 @@ import  Weather from './img/img-3.png';
 import { useTranslations } from '../translations'
 
 const CustomButton = styled(Button)`
-  background-color: red !important;
+  background-color: #1CAB4E !important;
 `
 
 const Article = styled.article`
@@ -27,15 +27,15 @@ const Main = styled.main`
   width:60%;
   height:auto;
 `;
-const Contenedor_thumbnail = styled.div`
+const ContenedorThumbnail = styled.div`
   width: 50%;
 `;
-const Contenedor_texto = styled.div`
+const ContenedorTexto = styled.div`
   padding: 20px;
   width: 50%;
   display: flex;
   flex-direction: column;
-  align-items:flex-start;
+  align-items: flex-start;
   justify-content: space-between;
   width: 100%;
 `;
@@ -71,25 +71,22 @@ const Proyects = () => {
   <>
     <Main>
       <Article>
-        <Contenedor_thumbnail>
+        <ContenedorThumbnail>
           <a href="#">
             <img src={Board} alt="" />
           </a>
-        </Contenedor_thumbnail>
-        <Contenedor_texto>
+        </ContenedorThumbnail>
+        <ContenedorTexto>
           <div>
             <Titulo>
               <a href="#">{t('proyects_section.proyects[0].title')}</a>
             </Titulo>
             <Fecha>
-              <time>Octubre 08, 2019</time>
+              <time>{t('proyects_section.proyects[0].date')}</time>
             </Fecha>
           </div>
           <Parrafo>
-            Este es un tablero interactivo donde puedes dibujar. Cuenta con
-            varias herramientas y configuraciones. Creé esta aplicación
-            siguiendo un tutorial de JS, luego la convertí en React como
-            ejercicio.
+           {t('proyects_section.proyects[0].desc')}
           </Parrafo>
           <CustomButton
             href="https://jhosep98.github.io/jdbsPaint-con-Reactjs/"
@@ -97,28 +94,28 @@ const Proyects = () => {
             variant="contained" 
             color="primary"
           >
-            Ver
+            {t('proyects_section.seeMore')}
           </CustomButton>
-        </Contenedor_texto>
+        </ContenedorTexto>
       </Article>
 
       <Article>
-        <Contenedor_thumbnail>
+        <ContenedorThumbnail>
           <a href="#">
             <img src={Generate} alt="" />
           </a>
-        </Contenedor_thumbnail>
-        <Contenedor_texto>
+        </ContenedorThumbnail>
+        <ContenedorTexto>
           <div>
             <Titulo>
-              <a href="#">Generador de efectos de imagen</a>
+              <a href="#">{t('proyects_section.proyects[1].title')}</a>
             </Titulo>
             <Fecha>
-              <time>Noviembre 15, 2019</time>
+              <time>{t('proyects_section.proyects[1].date')}</time>
             </Fecha>
           </div>
           <Parrafo>
-          Generador de efectos de imagen para su imagen. El resultado final es una porción de HTML que puede incrustar en su sitio web.
+          {t('proyects_section.proyects[1].desc')}
           </Parrafo>
           <CustomButton
             href="https://jhosep98.github.io/Carrusel/"
@@ -126,37 +123,37 @@ const Proyects = () => {
             variant="contained" 
             color="primary"
           >
-            Ver
+            {t('proyects_section.seeMore')}
           </CustomButton>
-        </Contenedor_texto>
+        </ContenedorTexto>
       </Article>
 
       <Article3>
-        <Contenedor_thumbnail>
+        <ContenedorThumbnail>
           <a href="#">
             <img src={Weather} alt="" />
           </a>
-        </Contenedor_thumbnail>
-        <Contenedor_texto>
+        </ContenedorThumbnail>
+        <ContenedorTexto>
           <div>
             <Titulo>
-              <a href="#">Aplicación de información meteorológica</a>
+              <a href="#">{t('proyects_section.proyects[2].title')}</a>
             </Titulo>
             <Fecha>
-              <time>Septiembre 10, 2019</time>
+              <time>{t('proyects_section.proyects[2].date')}</time>
             </Fecha>
           </div>
           <Parrafo>
-          Un sitio web simple que muestra información sobre el clima del país y la ciudad que usted quiera.
+          {t('proyects_section.proyects[2].desc')}
           </Parrafo>
           <CustomButton
             href="https://jhosep98.github.io/Weather-con-Reactjs/build/index"
             target="blank"
             variant="contained" color="primary"
           >
-            Ver
+            {t('proyects_section.seeMore')}
           </CustomButton>
-        </Contenedor_texto>
+        </ContenedorTexto>
       </Article3>
     </Main>
   </>

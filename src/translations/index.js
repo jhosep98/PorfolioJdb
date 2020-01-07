@@ -10,7 +10,13 @@ const Context = createContext()
 
 const translate = identifier => {
   const { currentLanguage } = useContext(Context)
-  const translation = get(TRANSLATIONS[currentLanguage], identifier)
+  const translations = TRANSLATIONS[currentLanguage]
+
+  if (!translations) {
+    throw `Missing translations for language ${currentLanguage}`
+  }
+
+  const translation = get(translations, identifier)
 
   if (!translation) {
     throw `Translation not found for language '${currentLanguage}': ${identifier}`

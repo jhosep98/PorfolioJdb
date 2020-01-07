@@ -17,6 +17,7 @@ const H2 = styled.h2`
   margin-bottom: 0.625rem;
   font-size: 1.5625em;
   padding: 10px;
+  text-decoration:underline;
 `;
 const P = styled.p`
   font-size: 1em;
@@ -48,18 +49,12 @@ const Destacado = () => {
     <Article>
       <div>
         <div>
-          <H2>Sobre mi:</H2>
+          <H2>{t('aboutMe.about')}</H2>
           <P>
-            <time>Enero 04, 2020</time>
+            <time>{t('aboutMe.date')}</time>
           </P>
         </div>
-        <Box_aboutMe>
-          *Edad: 21 <br />
-          *Nacionalidad: Peruana <br />
-          *Correo: jhosepdb149@gmail.com <br />
-          *Experiencia: Freelancer en www.Freelancer.com <br />
-          *Radica: Argentina - CABA
-        </Box_aboutMe>
+        <Box_aboutMe dangerouslySetInnerHTML={{__html: t('aboutMe.desc')}} />
       </div>
       <Contenedor_thumbnail>
         <img src={image1} />
