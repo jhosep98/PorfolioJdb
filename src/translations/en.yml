@@ -16,7 +16,7 @@ proyects_section:
       desc: A simple website that shows information about the climate of the country and the city          you want.
 aside:
   saludo: ¡Hello!
-  parrafo: I am a software developer that currently focuses on learning fullstack webdevelopment, starting with basic technologies like HTML and CSS, even more complex and moderntools and concepts like NodeJS, React, and version control.
+  parrafo: I am a software developer that currently focuses on learning fullstack web development, starting with basic technologies like HTML, CSS, JAVASCRIPT and other more complex and modern technologies such as NodeJS, React and version control.
 aboutMe:
   about: About me
   date: January 04, 2020
@@ -25,3 +25,6 @@ aboutMe:
     Email - jhosepdb149@gmail.com <br />
     Experience - Freelancer en www.Freelancer.com <br />
     Based at - Argentina - CABA
+  contact: CONTACT
+contact:
+  send: Submit

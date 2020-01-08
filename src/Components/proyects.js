@@ -9,7 +9,7 @@ import  Weather from './img/img-3.png';
 import { useTranslations } from '../translations'
 
 const CustomButton = styled(Button)`
-  background-color: #1CAB4E !important;
+  ${'' /* background-color: #1CAB4E !important; */}
 `
 
 const Article = styled.article`
@@ -91,8 +91,8 @@ const Proyects = () => {
           <CustomButton
             href="https://jhosep98.github.io/jdbsPaint-con-Reactjs/"
             target="blank"
-            variant="contained" 
-            color="primary"
+            variant="outlined" 
+            color="secondary"
           >
             {t('proyects_section.seeMore')}
           </CustomButton>
@@ -120,8 +120,8 @@ const Proyects = () => {
           <CustomButton
             href="https://jhosep98.github.io/Carrusel/"
             target="blank"
-            variant="contained" 
-            color="primary"
+            variant="outlined"
+            color="secondary"
           >
             {t('proyects_section.seeMore')}
           </CustomButton>
@@ -149,7 +149,7 @@ const Proyects = () => {
           <CustomButton
             href="https://jhosep98.github.io/Weather-con-Reactjs/build/index"
             target="blank"
-            variant="contained" color="primary"
+            variant="outlined" color="secondary"
           >
             {t('proyects_section.seeMore')}
           </CustomButton>

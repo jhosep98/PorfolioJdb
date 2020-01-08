@@ -16,7 +16,7 @@ proyects_section:
       desc: Un sitio web simple que muestra información sobre el clima del país y la ciudad que usted quiera.
 aside:
   saludo: ¡Hola!
-  parrafo: Soy un desarrollador de software Jr. que actualmente se enfoca en aprender desarrolloweb fullstack, comenzando con tecnologías básicas como HTML y CSS, herramientas y conceptosaún más complejos y modernos como NodeJS, React y control de versiones.
+  parrafo: Soy un desarrollador de software Jr. que actualmente se enfoca en aprender desarrollo web fullstack, comenzando con tecnologías básicas como HTML, CSS, JAVASCRIPT y otras tecnologias más complejas y modernas como NodeJS, React y control de versiones.
 aboutMe:
   about: Sobre mi
   date: Enero 04, 2020
@@ -25,3 +25,6 @@ aboutMe:
     Correo - jhosepdb149@gmail.com <br />
     Experiencia - Freelancer en www.Freelancer.com <br />
     Radica - Argentina - CABA
+  contact: CONTACTO
+contact:
+  send: Enviar

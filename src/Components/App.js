@@ -7,6 +7,7 @@ import Proyects from "./proyects";
 import Aside from "./aside";
 import Footer from "./footer";
 
+
 import { TranslationProvider } from '../translations'
 
 const GlobalStyle = createGlobalStyle`
@@ -51,6 +52,7 @@ const App = () => {
           </Box>
           <Footer />
         </Div>
+            
     </TranslationProvider>
   );
 };
