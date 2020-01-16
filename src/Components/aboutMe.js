@@ -71,9 +71,9 @@ const Destacado = () => {
         <BoxAboutMe dangerouslySetInnerHTML={{__html: t('aboutMe.desc')}} />
       </div>
       <ContenedorThumbnail>
-        <ContactButton onClick={_ => setContactModalOpen(true)} variant="outlined" color="secondary" disableElevation>{t('aboutMe.contact')}</ContactButton>
+        {/* <ContactButton onClick={_ => setContactModalOpen(true)} variant="outlined" color="secondary" disableElevation>{t('aboutMe.contact')}</ContactButton> */}
       </ContenedorThumbnail>
-      <ContactModal open={contactModalOpen} onClose={_ => setContactModalOpen(false)}/>
+      {/* <ContactModal open={contactModalOpen} onClose={_ => setContactModalOpen(false)}/> */}
     </Article>
   );
 };
