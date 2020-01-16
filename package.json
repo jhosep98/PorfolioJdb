@@ -1,13 +1,12 @@
 {
   "name": "profile-jdb",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --config ./webpack.config.js",
-    "build":"webpack -p",
-    "prepublish": "yarn build && git add -A && git commit -m 'Build files'",
-    "publish": "git subtree push --prefix dist origin gh-pages"
+    "build": "webpack -p",
+    "ghpages": "git subtree push --prefix dist origin gh-pages"
   },
   "keywords": [],
   "author": "",
