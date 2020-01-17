@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --mode development --config ./webpack.config.js",
     "build": "webpack -p",
-    "ghpages": "git subtree push --prefix dist origin gh-pages"
+    "ghpages": "git subtree push -f --prefix dist origin gh-pages"
   },
   "keywords": [],
   "author": "",

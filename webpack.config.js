@@ -36,7 +36,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, "dist"),
-    publicPath: "/PorfolioJdb",
+    publicPath: "https://github.io/jhosep98/PorfolioJdb/",
     filename: "bundle.js"
   },
   devServer: {
