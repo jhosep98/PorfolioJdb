@@ -1,5 +1,5 @@
-import React from './node_modules/react'
-import styled, { createGlobalStyle } from './node_modules/styled-components'
+import React from 'react'
+import styled, { createGlobalStyle } from 'styled-components'
 
 import Header from './Header'
 import AboutMe from './AboutMe'

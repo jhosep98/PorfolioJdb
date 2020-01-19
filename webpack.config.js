@@ -2,7 +2,8 @@ const path = require("path");
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-module.exports = {
+module.exports = (env, argv) => {
+  return {
   entry: path.resolve(__dirname, "src/index.js"),
   plugins: [
     new HtmlWebpackPlugin({
@@ -36,10 +37,11 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, "dist"),
-    publicPath: "https://jhosep98.github.io/PorfolioJdb/",
+    publicPath: argv.mode === 'production' ? 'https://jhosep98.github.io/PorfolioJdb/' : '/',
     filename: "bundle.js"
   },
   devServer: {
     contentBase: path.resolve(__dirname, "dist")
   }
-};
+}
+}

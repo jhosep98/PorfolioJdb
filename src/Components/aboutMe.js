@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import { useTranslations } from '../translations'
 import image1 from './img/laptop.jpeg'
+import ContactModalButton from './ContactModalButton'
 
 const Article = styled.article`
   margin-top: 2%;
@@ -42,11 +43,6 @@ const ContenedorThumbnail = styled.div`
   display:flex;
   justify-content:center;
   align-items:center;
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
 `
 
 const AboutMe = () => {
@@ -63,7 +59,9 @@ const AboutMe = () => {
         </div>
         <BoxAboutMe dangerouslySetInnerHTML={{ __html: t('aboutMe.desc') }} />
       </div>
+
       <ContenedorThumbnail>
+        <ContactModalButton />
       </ContenedorThumbnail>
     </Article>
   )
