@@ -1,10 +1,11 @@
 import React, { createContext, useState, useContext } from 'react'
+import PropTypes from 'prop-types'
 import get from 'lodash.get'
 
 import es from './es.yml'
 import en from './en.yml'
 
-const TRANSLATIONS  = { es, en }
+const TRANSLATIONS = { es, en }
 
 const Context = createContext()
 
@@ -13,13 +14,13 @@ const translate = identifier => {
   const translations = TRANSLATIONS[currentLanguage]
 
   if (!translations) {
-    throw `Missing translations for language ${currentLanguage}`
+    throw `Missing translations for language ${currentLanguage}` // eslint-disable-line no-throw-literal
   }
 
   const translation = get(translations, identifier)
 
   if (!translation) {
-    throw `Translation not found for language '${currentLanguage}': ${identifier}`
+    throw `Translation not found for language '${currentLanguage}': ${identifier}` // eslint-disable-line no-throw-literal
   }
 
   return translation
@@ -35,6 +36,11 @@ const TranslationProvider = ({ defaultLanguage, children }) => {
   )
 }
 
-const useTranslations = _ => useContext(Context)
+TranslationProvider.propTypes = {
+  defaultLanguage: PropTypes.string.isRequired,
+  children: PropTypes.element.isRequired
+}
+
+const useTranslations = () => useContext(Context)
 
 export { TranslationProvider, useTranslations }

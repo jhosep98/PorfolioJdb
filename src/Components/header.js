@@ -1,11 +1,9 @@
-import React from "react";
-import styled from "styled-components";
-import Select from '@material-ui/core/Select';
-import MenuItem from '@material-ui/core/MenuItem';
+import React from 'react'
+import styled from 'styled-components'
+import Select from '@material-ui/core/Select'
+import MenuItem from '@material-ui/core/MenuItem'
 
 import { useTranslations } from '../translations'
-
-
 
 const Div = styled.header`
   grid-area: header;
@@ -28,7 +26,7 @@ const Div = styled.header`
     background: #000;
     color: #fff;
   }
-`;
+`
 const InicialesLogo = styled.p`
   padding: 0.3125em;
   border: 2px solid #000;
@@ -44,19 +42,19 @@ const Logo = styled.div`
   letter-spacing: 3px;
   display:flex;
   justify-content:space-between;
-`;
+`
 const H1 = styled.h1`
 font-size: 30px;
 text-align:center;
 text-transform: uppercase;
 font-family:IBrushstroke, fantasy;
-`;
+`
 const Nav = styled.nav`
    border-top: 1px solid #000;
     border-bottom: 1px solid #000;
     display: flex;
     justify-content: space-between;
-`;
+`
 
 const Header = () => {
   const { currentLanguage, setCurrentLanguage } = useTranslations()
@@ -67,14 +65,14 @@ const Header = () => {
         <Select value={currentLanguage} onChange={ev => setCurrentLanguage(ev.target.value)}>
           <MenuItem value='es'>Español</MenuItem>
           <MenuItem value='en'>English</MenuItem>
-        </Select> 
-        </Logo>
-        <H1>Jhosep Davila Bustamante</H1>
+        </Select>
+      </Logo>
+      <H1>Jhosep Davila Bustamante</H1>
       <Nav className="menu">
         <a href="#">Inicio</a>
       </Nav>
     </Div>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

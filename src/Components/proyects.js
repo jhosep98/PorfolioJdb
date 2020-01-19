@@ -1,16 +1,12 @@
-import React from "react";
-import styled from "styled-components";
-import Button from "@material-ui/core/Button";
+import React from 'react'
+import styled from 'styled-components'
+import Button from '@material-ui/core/Button'
 
-import Board from './img/img-1.png';
-import Generate from './img/img-2.png';
-import  Weather from './img/img-3.png';
+import Board from './img/img-1.png'
+import Generate from './img/img-2.png'
+import Weather from './img/img-3.png'
 
 import { useTranslations } from '../translations'
-
-const CustomButton = styled(Button)`
-  ${'' /* background-color: #1CAB4E !important; */}
-`
 
 const Article = styled.article`
   display: flex;
@@ -20,16 +16,16 @@ const Article = styled.article`
   a {
     color: #000;
   }
-`;
+`
 const Main = styled.main`
   margin-top:2%;
   margin-right:2%;
   width:60%;
   height:auto;
-`;
+`
 const ContenedorThumbnail = styled.div`
   width: 50%;
-`;
+`
 const ContenedorTexto = styled.div`
   padding: 20px;
   width: 50%;
@@ -38,22 +34,22 @@ const ContenedorTexto = styled.div`
   align-items: flex-start;
   justify-content: space-between;
   width: 100%;
-`;
+`
 const Titulo = styled.h2`
   margin-bottom: 0.625rem;
   font-size: 1.3em;
-`;
+`
 const Fecha = styled.p`
   font-size: 1em;
   color: #868b8d;
   margin-bottom: 0.625rem;
-`;
+`
 const Parrafo = styled.p`
   font-size: 1em;
   line-height: 1.5625rem;
   font-weight: 300;
   color: #868b8d;
-`;
+`
 const Article3 = styled.article`
   display: flex;
   background: #fff;
@@ -62,13 +58,12 @@ const Article3 = styled.article`
   a {
     color: #000;
   }
-`;
+`
 
 const Proyects = () => {
   const { translate: t } = useTranslations()
 
   return (
-  <>
     <Main>
       <Article>
         <ContenedorThumbnail>
@@ -86,16 +81,16 @@ const Proyects = () => {
             </Fecha>
           </div>
           <Parrafo>
-           {t('proyects_section.proyects[0].desc')}
+            {t('proyects_section.proyects[0].desc')}
           </Parrafo>
-          <CustomButton
+          <Button
             href="https://jhosep98.github.io/jdbsPaint-con-Reactjs/"
             target="blank"
-            variant="outlined" 
+            variant="outlined"
             color="secondary"
           >
             {t('proyects_section.seeMore')}
-          </CustomButton>
+          </Button>
         </ContenedorTexto>
       </Article>
 
@@ -115,16 +110,16 @@ const Proyects = () => {
             </Fecha>
           </div>
           <Parrafo>
-          {t('proyects_section.proyects[1].desc')}
+            {t('proyects_section.proyects[1].desc')}
           </Parrafo>
-          <CustomButton
+          <Button
             href="https://jhosep98.github.io/Carrusel/"
             target="blank"
             variant="outlined"
             color="secondary"
           >
             {t('proyects_section.seeMore')}
-          </CustomButton>
+          </Button>
         </ContenedorTexto>
       </Article>
 
@@ -144,20 +139,19 @@ const Proyects = () => {
             </Fecha>
           </div>
           <Parrafo>
-          {t('proyects_section.proyects[2].desc')}
+            {t('proyects_section.proyects[2].desc')}
           </Parrafo>
-          <CustomButton
+          <Button
             href="https://jhosep98.github.io/Weather-con-Reactjs/build/index"
             target="blank"
             variant="outlined" color="secondary"
           >
             {t('proyects_section.seeMore')}
-          </CustomButton>
+          </Button>
         </ContenedorTexto>
       </Article3>
     </Main>
-  </>
   )
 }
 
-export default Proyects;
+export default Proyects
