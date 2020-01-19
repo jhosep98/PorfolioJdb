@@ -2,10 +2,15 @@ import React from "react";
 import PropTypes from 'prop-types'
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
+import CircularProgress from '@material-ui/core/CircularProgress';
 import { useForm, useField } from 'react-final-form-hooks'
 import styled from 'styled-components'
 
 import { useTranslations } from "../translations";
+
+const Root = styled.div`
+  position: relative;  
+`
 
 const CustomField = styled(TextField)`
   width: 400px !important;
@@ -18,6 +23,19 @@ const Form = styled.form`
   & > * {
     margin-bottom: 16px !important;
   }
+`
+
+const LoadingOverlay = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(256, 256, 256, 0.95);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
 
 const ContactForm = ({ onSuccess }) => {
@@ -35,8 +53,14 @@ const ContactForm = ({ onSuccess }) => {
   const comment = useField("comment", form);
 
   return (
-    <>
+    <Root>
       <h2>Contactame</h2>
+
+      {submitting && (
+        <LoadingOverlay>
+          <CircularProgress />
+        </LoadingOverlay>
+      )}
 
       <Form onSubmit={handleSubmit}>
         <CustomField
@@ -77,7 +101,7 @@ const ContactForm = ({ onSuccess }) => {
           {t("contact.send")}
         </Button>
       </Form>
-    </>
+    </Root>
   );
 };
 

@@ -6,16 +6,6 @@ import styled from "styled-components";
 
 import ContactForm from './ContactForm'
 
-const CustomField = styled(TextField)`
-  width: 400px !important;
-`;
-
-const CustomButton = styled.div`
-  display: flex;
-  justify-content center;
-  align-items: center;
-`;
-
 const CenteredModal = styled(Modal)`
   display: flex;
   align-items: center;
