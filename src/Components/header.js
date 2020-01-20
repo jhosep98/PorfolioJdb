@@ -49,12 +49,6 @@ text-align:center;
 text-transform: uppercase;
 font-family:IBrushstroke, fantasy;
 `
-const Nav = styled.nav`
-   border-top: 1px solid #000;
-    border-bottom: 1px solid #000;
-    display: flex;
-    justify-content: space-between;
-`
 
 const Header = () => {
   const { currentLanguage, setCurrentLanguage } = useTranslations()
@@ -68,9 +62,6 @@ const Header = () => {
         </Select>
       </Logo>
       <H1>Jhosep Davila Bustamante</H1>
-      <Nav className="menu">
-        <a href="#">Inicio</a>
-      </Nav>
     </Div>
   )
 }

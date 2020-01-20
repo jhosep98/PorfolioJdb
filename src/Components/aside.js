@@ -41,7 +41,8 @@ const Div = styled.div`
 `
 const Menu = styled.nav`
   width: 100%;
-  display: inline-block;
+  display: flex;
+  flex-direction:column;
   background: #ccc;
   font-size: 0.9em;
 `

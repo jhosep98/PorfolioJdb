@@ -26,7 +26,7 @@ const ContactModalButton = ({}) => {
 
   return (
     <>
-      <Button variant="outlined" color="primary" onClick={() => setOpen(true)}>
+      <Button variant="outlined" color="secondary" onClick={() => setOpen(true)}>
         Contacto
       </Button>
 
