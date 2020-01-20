@@ -27,4 +27,10 @@ aboutMe:
     Radica - Argentina - CABA
   contact: CONTACTO
 contact:
+  name: Nombre
+  email: Email
+  message: Mensage
+  contacto: Contáctame
   send: Enviar
+footer:
+  button: Codigo Fuente

@@ -51,10 +51,9 @@ const ContactForm = ({ onSuccess }) => {
   const name = useField("name", form);
   const email = useField("email", form);
   const comment = useField("comment", form);
-
   return (
     <Root>
-      <h2>Contactame</h2>
+      <h2>{t('contact.contacto')}</h2>
 
       {submitting && (
         <LoadingOverlay>
@@ -64,7 +63,7 @@ const ContactForm = ({ onSuccess }) => {
 
       <Form onSubmit={handleSubmit}>
         <CustomField
-          label="Nombre"
+          label={t('contact.name')}
           name="name"
           rowsMax="4"
           variant="outlined"
@@ -73,7 +72,7 @@ const ContactForm = ({ onSuccess }) => {
         />
 
         <CustomField
-          label="Email"
+          label={t('contact.email')}
           name="email"
           rowsMax="4"
           variant="outlined"
@@ -82,7 +81,7 @@ const ContactForm = ({ onSuccess }) => {
         />
 
         <CustomField
-          label="Message"
+          label={t('contact.message')}
           name="comment"
           multiline
           rows="4"

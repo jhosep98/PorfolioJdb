@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import Button from "@material-ui/core/Button"
+
+import Button from '@material-ui/core/Button'
+import { useTranslations } from '../translations'
 
 const Root = styled.footer`
   margin-top:2%;
@@ -20,7 +22,9 @@ const CustomButton = styled(Button)`
   color:black;
 `
 
-const Footer = () => (
+const Footer = () => {
+  const { translate: t } = useTranslations()
+  return(
   <Root>
     <p>Copyright © 2020 Jhosep Davila Bustamante</p>
     <CustomButton 
@@ -28,8 +32,8 @@ const Footer = () => (
     color="secondary"
     href="https://github.com/jhosep98/PorfolioJdb/tree/master"
     target="blank"
-    >Codigo Fuente</CustomButton>
+    >{t('footer.button')}</CustomButton>
   </Root>
 )
-
+}
 export default Footer

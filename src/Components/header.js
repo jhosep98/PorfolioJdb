@@ -44,10 +44,10 @@ const Logo = styled.div`
   justify-content:space-between;
 `
 const H1 = styled.h1`
-font-size: 30px;
-text-align:center;
-text-transform: uppercase;
-font-family:IBrushstroke, fantasy;
+  font-size: 30px;
+  text-align:center;
+  text-transform: uppercase;
+  font-family:IBrushstroke, fantasy;
 `
 
 const Header = () => {
