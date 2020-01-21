@@ -18,7 +18,6 @@ const H2 = styled.h2`
   margin-bottom: 0.625rem;
   font-size: 1.5625em;
   padding: 10px;
-  text-decoration:underline;
 `
 const P = styled.p`
   font-size: 1em;
