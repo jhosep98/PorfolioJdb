@@ -32,7 +32,9 @@ const InicialesLogo = styled.p`
   border: 2px solid #000;
   font-size: 1em;
   margin-bottom: 0.9375em;
-  width:10%;
+  @media(max-width: 400px){
+    font-size:0.8em !important;
+  }
 `
 
 const Logo = styled.div`
@@ -48,6 +50,10 @@ const H1 = styled.h1`
   text-align:center;
   text-transform: uppercase;
   font-family:IBrushstroke, fantasy;
+
+  @media(max-width: 400px){
+    font-size:20px;
+  }
 `
 
 const Header = () => {

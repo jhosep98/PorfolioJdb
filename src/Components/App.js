@@ -40,6 +40,10 @@ const Div = styled.div`
 const Box = styled.div`
   width:100%;
   display:flex;
+  @media(max-width: 400px){
+    display:flex;
+    flex-direction:column;
+  }
 `
 
 const App = () => {

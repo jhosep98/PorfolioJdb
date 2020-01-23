@@ -14,6 +14,9 @@ const Root = styled.aside`
   background: #000;
   color: #868b8d;
   box-shadow: 0px 0px 70px rgba(102, 102, 102, 0.2);
+  @media(max-width: 400px){
+    width:100%;
+  }
 `
 
 const A = styled.a`
@@ -33,11 +36,18 @@ const Img = styled.img`
   height: 10em;
   width: 10em;
   margin-bottom: 1.5625em;
+  @media(max-width: 400px){
+    height: 8em;
+    width: 8em;
+  }
 `
 const Div = styled.div`
   margin-bottom: 1.5625em;
   font-size: 1.1em;
   line-height: 1.5625em;
+  @media(max-width: 400px){
+    font-size:0.9em;
+  }
 `
 const Menu = styled.nav`
   width: 100%;
@@ -45,6 +55,9 @@ const Menu = styled.nav`
   flex-direction:column;
   background: #ccc;
   font-size: 0.9em;
+  @media(max-width: 400px){
+    font-size:0.7em;
+  }
 `
 
 const Aside = () => {

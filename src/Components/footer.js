@@ -16,6 +16,9 @@ const Root = styled.footer`
   & > p {
     margin: 2%;
   }
+  @media(max-width: 400px){
+    font-size: 0.9em;
+  }
 `;
 const CustomButton = styled(Button)`
   height: 50px;
@@ -29,6 +32,10 @@ const Img = styled.img`
   background-size: cover;
   width: 100%;
   height: 100%;
+  @media(max-width: 400px){
+    width: 40px;
+    height: 40px;
+  }
 `;
 const Footer = () => {
   return (

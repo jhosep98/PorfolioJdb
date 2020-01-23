@@ -1,2 +1,5 @@
 node_modules
 .DS_Store
+src/Components/.DS_Store
+src/.DS_Store
+src/Components/img/.DS_Store

@@ -16,15 +16,25 @@ const Article = styled.article`
   a {
     color: #000;
   }
+  @media(max-width: 400px){
+    display:flex;
+    flex-direction:column;
+  }
 `
 const Main = styled.main`
   margin-top:2%;
   margin-right:2%;
   width:60%;
   height:auto;
+  @media(max-width: 400px){
+    width: 100%;
+  }
 `
 const ContenedorThumbnail = styled.div`
   width: 50%;
+  @media(max-width: 400px){
+    width: 100%;
+  }
 `
 const ContenedorTexto = styled.div`
   padding: 20px;
@@ -38,17 +48,26 @@ const ContenedorTexto = styled.div`
 const Titulo = styled.h2`
   margin-bottom: 0.625rem;
   font-size: 1.3em;
+  @media(max-width: 400px){
+    font-size:0.9em;
+  }
 `
 const Fecha = styled.p`
   font-size: 1em;
   color: #868b8d;
   margin-bottom: 0.625rem;
+  @media(max-width: 400px){
+    font-size:0.8em;
+  }
 `
 const Parrafo = styled.p`
   font-size: 1em;
   line-height: 1.5625rem;
   font-weight: 300;
   color: #868b8d;
+  @media(max-width: 400px){
+    font-size:0.7em;
+  }
 `
 const Article3 = styled.article`
   display: flex;
@@ -57,6 +76,19 @@ const Article3 = styled.article`
   margin-bottom:0%;
   a {
     color: #000;
+  }
+  @media(max-width: 400px){
+    display:flex;
+    flex-direction:column;
+  }
+`
+const Box = styled.div`
+  display:flex;
+`
+const CustomButton = styled(Button)`
+  margin:5px!important;
+  @media(max-width: 400px){
+    font-size:0.6em!important;
   }
 `
 
@@ -74,7 +106,8 @@ const Proyects = () => {
         <ContenedorTexto>
           <div>
             <Titulo>
-              <a href="#">{t('proyects_section.proyects[0].title')}</a>
+              <a href="https://jhosep98.github.io/jdbsPaint-con-Reactjs/"
+              target="blank">{t('proyects_section.proyects[0].title')}</a>
             </Titulo>
             <Fecha>
               <time>{t('proyects_section.proyects[0].date')}</time>
@@ -83,14 +116,24 @@ const Proyects = () => {
           <Parrafo>
             {t('proyects_section.proyects[0].desc')}
           </Parrafo>
-          <Button
+        <Box>
+          <CustomButton
             href="https://jhosep98.github.io/jdbsPaint-con-Reactjs/"
             target="blank"
             variant="outlined"
             color="secondary"
           >
             {t('proyects_section.seeMore')}
-          </Button>
+          </CustomButton>
+          <CustomButton
+            href="https://github.com/jhosep98/jdbsPaint-con-Reactjs"
+            target="blank"
+            variant="outlined"
+            color="secondary"
+          >
+            {t('proyects_section.sourceCode')}
+          </CustomButton>
+          </Box>
         </ContenedorTexto>
       </Article>
 
@@ -103,7 +146,8 @@ const Proyects = () => {
         <ContenedorTexto>
           <div>
             <Titulo>
-              <a href="#">{t('proyects_section.proyects[1].title')}</a>
+              <a href="https://jhosep98.github.io/Carrusel/"
+              target="blank">{t('proyects_section.proyects[1].title')}</a>
             </Titulo>
             <Fecha>
               <time>{t('proyects_section.proyects[1].date')}</time>
@@ -112,14 +156,24 @@ const Proyects = () => {
           <Parrafo>
             {t('proyects_section.proyects[1].desc')}
           </Parrafo>
-          <Button
+        <Box>
+          <CustomButton
             href="https://jhosep98.github.io/Carrusel/"
             target="blank"
             variant="outlined"
             color="secondary"
           >
             {t('proyects_section.seeMore')}
-          </Button>
+          </CustomButton>
+          <CustomButton
+            href="https://github.com/jhosep98/Carrusel"
+            target="blank"
+            variant="outlined"
+            color="secondary"
+          >
+            {t('proyects_section.sourceCode')}
+          </CustomButton>
+          </Box>
         </ContenedorTexto>
       </Article>
 
@@ -132,7 +186,12 @@ const Proyects = () => {
         <ContenedorTexto>
           <div>
             <Titulo>
-              <a href="#">{t('proyects_section.proyects[2].title')}</a>
+              <a 
+              href="https://jhosep98.github.io/Weather-con-Reactjs/build/index"
+              target="blank"
+              >
+              {t('proyects_section.proyects[2].title')}
+              </a>
             </Titulo>
             <Fecha>
               <time>{t('proyects_section.proyects[2].date')}</time>
@@ -141,13 +200,23 @@ const Proyects = () => {
           <Parrafo>
             {t('proyects_section.proyects[2].desc')}
           </Parrafo>
-          <Button
+          <Box>
+          <CustomButton
             href="https://jhosep98.github.io/Weather-con-Reactjs/build/index"
             target="blank"
             variant="outlined" color="secondary"
           >
             {t('proyects_section.seeMore')}
-          </Button>
+          </CustomButton>
+          <CustomButton
+            href="https://github.com/jhosep98/Weather-con-Reactjs"
+            target="blank"
+            variant="outlined"
+            color="secondary"
+          >
+            {t('proyects_section.sourceCode')}
+          </CustomButton>
+          </Box>
         </ContenedorTexto>
       </Article3>
     </Main>

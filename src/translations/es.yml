@@ -1,5 +1,6 @@
 proyects_section:
   seeMore: Ver
+  sourceCode: Codigo Fuente
   proyects:
     -
       title: Tablero de dibujo
