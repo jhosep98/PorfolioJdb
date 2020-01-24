@@ -187,7 +187,7 @@ const Proyects = () => {
           <div>
             <Titulo>
               <a 
-              href="https://jhosep98.github.io/Weather-con-Reactjs/build/index"
+              href="https://jhosep98.github.io/Weather-con-Reactjs/"
               target="blank"
               >
               {t('proyects_section.proyects[2].title')}
@@ -202,7 +202,7 @@ const Proyects = () => {
           </Parrafo>
           <Box>
           <CustomButton
-            href="https://jhosep98.github.io/Weather-con-Reactjs/build/index"
+            href="https://jhosep98.github.io/Weather-con-Reactjs/"
             target="blank"
             variant="outlined" color="secondary"
           >
