@@ -18,7 +18,7 @@ const Body = styled(Paper)`
   padding: 20px;
 `;
 
-const SuccessMessage = forwardRef((props, ref) => (<div ref={ref}>Arigato gozaimasu, oni-chan</div>))
+const SuccessMessage = forwardRef((props, ref) => (<div ref={ref}>Send</div>))
 
 const ContactModalButton = ({}) => {
   const [open, setOpen] = useState(false) 
